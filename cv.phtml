@@ -1,0 +1,147 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            CV
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body id="cv" class="<?= $user['couleurs']; ?>">
+        <header>
+            <h1><span><?= $user['nom']; ?></span> <?= $user['prenom']; ?></h1>
+            <h2>Intitulé du poste</h2>
+        </header>
+        <main>
+            <section id="left">
+                <h3>Informations</h3>
+                <section>
+                    <h4>
+                        Contact
+                    </h4>
+                    <dl>
+                        <dt>
+                            Email
+                        </dt>
+                        <dd>
+                            <?= $email; ?>
+                        </dd>
+                        <dt>
+                            Téléphone
+                        </dt>
+                        <dd>
+                            <?= $telephone; ?>
+                        </dd>
+                        <dt>
+                            LinkedIn
+                        </dt>
+                        <dd>
+                            <a href="<?= $linkedin ?>"><?= $linkedin ?></a>
+                        </dd>
+                        <dt>
+                            GitHub
+                        </dt>
+                        <dd>
+                            <a href="<?= $github ?>"><?= $github ?></a>
+                        </dd>
+                    </dl>
+                </section>
+                <section>
+                    <h4>Biographie</h4>
+                    <p>
+                        <?= $bio; ?>
+                    </p>
+                </section>
+                <section>
+                    <h4>Loisirs</h4>
+                    <ul>
+                        <li>
+                            <?= $loisir1; ?>
+                        </li>
+                        <li>
+                            <?= $loisir2; ?>
+                        </li>
+                        <li>
+                            <?= $loisir3; ?>
+                        </li>
+                        <li>
+                            <?= $loisir4; ?>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section id="right">
+                <h3>Compétences</h3>
+                <section>
+                    <h4>Langages des programmation</h4>
+                    <ul>
+                        <?php
+                        
+                            foreach($lang as $item)
+                            {
+                        ?>
+                        
+                            <li><?= $item; ?></li>
+                        
+                        <?php   
+                            }
+                        ?>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Frameworks & Librairies</h4>
+                    <ul>
+                        <?php
+                        
+                            foreach($framework as $item)
+                            {
+                        ?>
+                        
+                            <li><?= $item; ?></li>
+                        
+                        <?php   
+                            }
+                        ?>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Logiciels</h4>
+                    <ul>
+                        <?php
+                        
+                            foreach($software as $item)
+                            {
+                        ?>
+                        
+                            <li><?= $item; ?></li>
+                        
+                        <?php   
+                            }
+                        ?>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Langues</h4>
+                    <ul>
+                        <?php
+                        
+                            foreach($language as $item)
+                            {
+                        ?>
+                        
+                            <li><?= $item; ?></li>
+                        
+                        <?php   
+                            }
+                        ?>
+                    </ul>
+                </section>
+            </section>
+        </main>
+    </body>
+</html>

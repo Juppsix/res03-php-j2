@@ -8,10 +8,20 @@ $user = [
  "linkedin" => "",
  "github" => "",
  "biographie" => "",
- "loisir-1" => "",
- "loisir-2" => "",
- "loisir-3" => "",
-"loisir-4" => "",
+ "loisir1" => "",
+ "loisir2" => "",
+ "loisir3" => "",
+"loisir4" => "",
+
+"language" => [],
+
+"lang" => [],
+
+"frameworks" => [],
+
+"software" => [],
+
+"couleurs" => [],
 ];
 // if (isset($_POST['firstName']) && isset($_POST['lastName'])) {
 //     echo $_POST['firstName'];
@@ -40,22 +50,39 @@ if (isset ($_POST['github'])) {
 if (isset ($_POST['biographie'])) {
     $user['biographie'] = $_POST['biographie'];
 }
-if (isset ($_POST['loisir-1'])) {
+if (isset ($_POST['loisir1'])) {
     $user['loisir-1'] = $_POST['loisir-1'];
 }
-if (isset ($_POST['loisir-2'])) {
+if (isset ($_POST['loisir2'])) {
     $user['loisir-2'] = $_POST['loisir-2'];
 }
-if (isset ($_POST['loisir-3'])) {
+if (isset ($_POST['loisir3'])) {
     $user['loisir-3'] = $_POST['loisir-3'];
 }
-if (isset ($_POST['loisir-4'])) {
+if (isset ($_POST['loisir4'])) {
     $user['loisir-4'] = $_POST['loisir-4'];
+}
+
+if (isset ($_POST['language'])) {
+    $user['language'] = $_POST['language'];
+}
+
+if (isset ($_POST['lang'])) {
+    $user['lang'] = $_POST['lang'];
+}
+
+if (isset ($_POST['checkbox'])) {
+    $user['checkbox'] = $_POST['checkbox'];
+}
+
+if (isset ($_POST['couleurs'])) {
+    $user['couleurs'] = $_POST['couleurs'];
 }
 
 echo "<pre>";
 var_dump($user);
 echo "<pre>";
 
+require './cv.phtml'; 
 // if isset $_POST[truc]
 // alors user[truc] va valloir post de truc
